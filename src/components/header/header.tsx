@@ -1,17 +1,39 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 import { Container } from 'components/container';
+import { Logo } from 'components/logo';
 
 import styles from './header.module.scss';
-import { Logo } from 'components/logo';
 
 export const Header = () => {
     return (
         <header className={styles.root}>
-            <Container className={styles.headerInner}>
-                <Logo />
-                <div>about us</div>
-                <div>our services</div>
-                <div>cases</div>
+            <Container>
+                <nav>
+                    <ul className={styles.headerInner}>
+                        <li>
+                            <NavLink to="/" className={styles.link}>
+                                <Logo />
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/" className={styles.link}>
+                                about us
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/" className={styles.link}>
+                                our services
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/cases" className={styles.link}>
+                                cases
+                            </NavLink>
+                        </li>
+                    </ul>
+                </nav>
             </Container>
         </header>
     );

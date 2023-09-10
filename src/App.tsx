@@ -25,7 +25,7 @@ export const App = () => {
                     <Route path="/cases/:id" element={<CasePage />} />
                 </Routes>
             </Block>
-            <Block mt="auto">
+            <Block mt={150}>
                 <Divider />
                 <Footer />
             </Block>

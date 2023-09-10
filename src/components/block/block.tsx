@@ -11,15 +11,17 @@ interface Props {
     pl: React.CSSProperties['paddingLeft'];
     pr: React.CSSProperties['paddingRight'];
     width: React.CSSProperties['width'];
+    height: React.CSSProperties['height'];
     children: React.ReactNode;
 }
 
-export const Block = ({ children, width, className, mb, ml, mr, mt, pt, pb, pl, pr }: Partial<Props>) => {
+export const Block = ({ children, width, height, className, mb, ml, mr, mt, pt, pb, pl, pr }: Partial<Props>) => {
     return (
         <div
             className={className}
             style={{
                 width,
+                height,
                 marginTop: mt,
                 marginBottom: mb,
                 marginLeft: ml,

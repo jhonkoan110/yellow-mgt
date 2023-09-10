@@ -7,6 +7,7 @@ interface Props {
     alignItems: React.CSSProperties['alignItems'];
     justifyContent: React.CSSProperties['justifyContent'];
     flexDirection: React.CSSProperties['flexDirection'];
+    wrap: React.CSSProperties['flexWrap'];
     gap: React.CSSProperties['gap'];
     className: string;
     children: React.ReactNode;
@@ -19,9 +20,12 @@ export const FlexContainer = ({
     flexDirection,
     gap,
     children,
+    wrap,
 }: Partial<Props>) => {
     return (
-        <div className={cn(styles.root, className)} style={{ gap, alignItems, justifyContent, flexDirection }}>
+        <div
+            className={cn(styles.root, className)}
+            style={{ flexWrap: wrap, gap, alignItems, justifyContent, flexDirection }}>
             {children}
         </div>
     );

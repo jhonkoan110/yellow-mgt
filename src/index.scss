@@ -8,6 +8,10 @@
     font-family: $poppins;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 html,
 body,
 #root {

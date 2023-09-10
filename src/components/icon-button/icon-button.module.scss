@@ -1,0 +1,9 @@
+.root {
+    padding: 0;
+    border: none;
+    height: fit-content;
+
+    &:hover {
+        background-color: transparent;
+    }
+}

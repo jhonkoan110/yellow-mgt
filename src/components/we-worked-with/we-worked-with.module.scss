@@ -4,10 +4,11 @@
     .image {
         filter: grayscale(1);
 
-        transition: filter 0.2s linear;
+        transition: filter 0.2s ease-in-out;
 
         &:hover {
             filter: grayscale(0);
+            cursor: pointer;
         }
     }
 

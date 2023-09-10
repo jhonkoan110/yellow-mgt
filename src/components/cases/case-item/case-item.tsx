@@ -7,6 +7,7 @@ import { Container } from 'components/container';
 import { FlexContainer } from 'components/flex-container';
 import { Button } from 'components/button';
 import { ArrowIcon } from 'components/icons/arrow-icon';
+import { IconButton } from 'components/icon-button';
 
 interface Props {
     id: number | string;
@@ -38,11 +39,11 @@ export const CaseItem = ({ id, title, addition }: Props) => {
                             )}
                         </FlexContainer>
                         <Block>
-                            <Button
+                            <IconButton
                                 className={cn(styles.toggleButton, { [styles.mirror]: isOpen })}
                                 onClick={handleClick}>
                                 <ArrowIcon />
-                            </Button>
+                            </IconButton>
                         </Block>
                     </FlexContainer>
                 </Block>

@@ -1,0 +1,22 @@
+@import 'styles/variables.scss';
+
+.root {
+    padding: 30px;
+    border: 1px solid black;
+    height: 150px;
+    width: calc($app-width / 3);
+    height: 240px;
+
+    .heading {
+        font-size: 20px;
+        font-family: $barracuda;
+        line-height: 26px;
+        text-transform: uppercase;
+    }
+
+    .description {
+        font-family: $poppins;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
