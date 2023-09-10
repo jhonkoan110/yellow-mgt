@@ -5,6 +5,7 @@ import { Divider } from 'components/divider';
 import { Container } from 'components/container';
 
 import styles from './topic.module.scss';
+import { Block } from 'components/block';
 
 interface Props {
     title: string;
@@ -13,10 +14,12 @@ interface Props {
 
 export const Topic = ({ className, title }: Props) => {
     return (
-        <Container className={cn(styles.root, className)}>
-            <Divider width={70} />
-            <h1 className={styles.title}>{title}</h1>
-            <Divider className={styles.rightDivider} />
-        </Container>
+        <Block className={styles.root}>
+            <Divider className={styles.divider}>
+                <Container className={styles.container}>
+                    <h1 className={styles.title}>{title}</h1>
+                </Container>
+            </Divider>
+        </Block>
     );
 };

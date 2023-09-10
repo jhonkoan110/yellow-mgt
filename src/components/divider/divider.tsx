@@ -6,8 +6,13 @@ import styles from './divider.module.scss';
 interface Props {
     width?: React.CSSProperties['width'];
     className?: string;
+    children?: React.ReactNode;
 }
 
-export const Divider = ({ width, className }: Props) => {
-    return <div style={{ width }} className={cn(styles.root, className)} />;
+export const Divider = ({ width, className, children }: Props) => {
+    return (
+        <div style={{ width }} className={cn(styles.root, className)}>
+            {children}
+        </div>
+    );
 };

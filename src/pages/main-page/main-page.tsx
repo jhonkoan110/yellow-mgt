@@ -5,6 +5,7 @@ import { MainInfo } from 'components/main-info';
 import { OurServices } from 'components/our-services';
 import { Topic } from 'components/topic';
 import { WeWorkedWith } from 'components/we-worked-with';
+import { Feedback } from 'components/feedback';
 
 export const MainPage = () => {
     return (
@@ -22,6 +23,8 @@ export const MainPage = () => {
 
             <Topic title="we worked with" />
             <WeWorkedWith />
+
+            <Feedback />
         </>
     );
 };
