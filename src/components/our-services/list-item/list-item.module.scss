@@ -1,0 +1,28 @@
+@import 'styles/variables.scss';
+
+.root {
+    &:not(:first-of-type) {
+        margin-top: 30px;
+    }
+
+    .indexNumber {
+        font-family: $barracuda;
+        font-size: 24px;
+        margin: 15px 0;
+        width: 26px;
+    }
+
+    .title {
+        font-family: $barracuda;
+        font-size: 20px;
+        line-height: 26px;
+        margin: 15px 0;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    .description {
+        line-height: 24px;
+        font-size: 16px;
+    }
+}

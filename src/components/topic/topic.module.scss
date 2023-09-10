@@ -1,0 +1,21 @@
+@import 'styles/variables.scss';
+
+.root {
+    margin-top: 150px;
+    display: flex;  
+    align-items: center;
+    gap: 40px;
+    width: 1280px;
+
+    .title {
+        font-family: $barracuda;
+        font-size: 54px;
+        line-height: normal;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .rightDivider {
+        flex: 1;
+    }
+}

@@ -1,0 +1,18 @@
+.root {
+    margin-bottom: 150px;
+
+    .image {
+        filter: grayscale(1);
+
+        transition: filter 0.2s linear;
+
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+
+    .seeAllBtn {
+        text-decoration: underline;
+        text-align: center;
+    }
+}
