@@ -18,7 +18,7 @@ export const ListItem = ({ indexNumber, title, description }: Props) => {
             <FlexContainer gap={90}>
                 <Block className={styles.indexNumber}>{indexNumber}</Block>
                 <Block width={509} className={styles.test}>
-                    <Divider />
+                    <Divider height={1} />
                     <h3 className={styles.title}>{title}</h3>
                     <p className={styles.description}>{description}</p>
                 </Block>

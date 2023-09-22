@@ -6,10 +6,11 @@ import { ImageIcon } from 'components/icons/image-icon/image-icon';
 import { ImageReflectionIcon } from 'components/icons/image-reflection-icon';
 import { MattersALotIcon } from 'components/icons/matters-a-lot-icon';
 import { TheseDaysIcon } from 'components/icons/these-days-icon';
-
-import styles from './main-info.module.scss';
 import { Button } from 'components/button';
 import { ArrowIcon } from 'components/icons/arrow-icon';
+import { HashLink } from 'react-router-hash-link';
+
+import styles from './main-info.module.scss';
 
 export const MainInfo = () => {
     return (
@@ -31,11 +32,13 @@ export const MainInfo = () => {
                             you become a leader in your industry and reach more of your target audience. We guarantee
                             results and an individual approach to each client.
                         </p>
-                        <Button className={styles.casesButton}>
-                            <FlexContainer justifyContent="space-between">
-                                CASES <ArrowIcon />
-                            </FlexContainer>
-                        </Button>
+                        <HashLink to="/#cases">
+                            <Button className={styles.casesButton}>
+                                <FlexContainer justifyContent="space-between">
+                                    CASES <ArrowIcon />
+                                </FlexContainer>
+                            </Button>
+                        </HashLink>
                     </FlexContainer>
                 </FlexContainer>
             </FlexContainer>

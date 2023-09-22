@@ -1,32 +1,17 @@
 @import 'styles/variables.scss';
 
 .root {
-    .divider {
-        position: relative;
+    .title {
+        font-size: 54px;
+        font-family: $barracuda;
+        min-width: fit-content;
+        text-transform: uppercase;
     }
 
-    .flexContainer {
-        position: absolute;
-        top: -24px;
-
-        .title {
-            background-color: $app-background;
-            padding: 0 20px;
-            font-size: 54px;
-            font-family: $barracuda;
-            text-transform: uppercase;
-        }
-
-        .mailContainer {
-          background-color: $app-background;
-          padding: 0 20px;
-
-            .mail {
-              padding: 20px 24px;
-              background-color: $orange;
-              text-transform: uppercase;
-              line-height: 20px;
-            }
-        }
+    .mail {
+        padding: 20px 24px;
+        background-color: $orange;
+        text-transform: uppercase;
+        line-height: 20px;
     }
 }

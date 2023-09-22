@@ -10,6 +10,7 @@
 
 html {
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -21,5 +22,10 @@ body,
 
 body {
     background-color: $app-background;
+
     padding: 30px 0;
+}
+
+a {
+    text-decoration: none;
 }

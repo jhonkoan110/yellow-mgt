@@ -10,16 +10,20 @@ import { Block } from 'components/block';
 interface Props {
     title: string;
     className?: string;
+    name?: string;
 }
 
-export const Topic = ({ className, title }: Props) => {
+export const Topic = ({ className, title, name }: Props) => {
     return (
-        <Block className={styles.root}>
-            <Divider className={styles.divider}>
-                <Container className={styles.container}>
-                    <h1 className={styles.title}>{title}</h1>
-                </Container>
-            </Divider>
-        </Block>
+        <>
+            <Block className={styles.root}>
+                <Divider className={styles.divider}>
+                    {name && <a id={name} className={styles.anchor} />}
+                    <Container className={styles.container}>
+                        <h1 className={styles.title}>{title}</h1>
+                    </Container>
+                </Divider>
+            </Block>
+        </>
     );
 };

@@ -7,11 +7,12 @@ interface Props {
     width?: React.CSSProperties['width'];
     className?: string;
     children?: React.ReactNode;
+    height?: React.CSSProperties['height'];
 }
 
-export const Divider = ({ width, className, children }: Props) => {
+export const Divider = ({ width, className, height, children }: Props) => {
     return (
-        <div style={{ width }} className={cn(styles.root, className)}>
+        <div style={{ width, height }} className={cn(styles.root, className)}>
             {children}
         </div>
     );

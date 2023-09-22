@@ -8,14 +8,15 @@ import { FlexContainer } from 'components/flex-container';
 import { Button } from 'components/button';
 import { ArrowIcon } from 'components/icons/arrow-icon';
 import { IconButton } from 'components/icon-button';
+import { CompanyCase } from 'types/company';
 
-interface Props {
-    id: number | string;
+interface Props extends CompanyCase {
+    // id: number | string;
     title: string;
     addition: string;
 }
 
-export const CaseItem = ({ id, title, addition }: Props) => {
+export const CaseItem = ({ link, title, imageSrc, addition, caseLabel }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = () => {
@@ -23,17 +24,17 @@ export const CaseItem = ({ id, title, addition }: Props) => {
     };
 
     return (
-        <Block className={styles.root}>
-            <Container>
+        <Block className={cn(styles.root, { [styles.expanded]: isOpen })}>
+            <Container className={styles.container}>
                 <Block mt={30} mb={30}>
                     <FlexContainer justifyContent="space-between">
                         <FlexContainer>
                             {isOpen && <Block className={styles.image} />}
                             {!isOpen ? (
-                                <Block className={styles.title}>{title}</Block>
+                                <Block className={styles.title}>{caseLabel}</Block>
                             ) : (
                                 <FlexContainer flexDirection="column" justifyContent="space-between">
-                                    <Block className={styles.title}>{title}</Block>
+                                    <Block className={styles.title}>{caseLabel}</Block>
                                     <Block>{addition}</Block>
                                 </FlexContainer>
                             )}

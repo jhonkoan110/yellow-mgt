@@ -8,28 +8,32 @@ import { Routes, Route } from 'react-router-dom';
 import { MainPage } from 'pages/main-page';
 import { CasesPage } from 'pages/cases-page';
 import { CasePage } from 'pages/case-page';
+import { Anchors } from 'constants/anchors';
 
 import styles from './App.module.scss';
 
 export const App = () => {
     return (
-        <FlexContainer className={styles.root} flexDirection="column" justifyContent="space-between">
-            <Block>
-                <Divider />
-                <Header />
-                <Divider />
+        <>
+            <a id={Anchors.Logo} />
+            <FlexContainer className={styles.root} flexDirection="column" justifyContent="space-between">
+                <Block>
+                    <Divider />
+                    <Header />
+                    <Divider />
 
-                <Routes>
-                    <Route path="/" element={<MainPage />} />
-                    <Route path="/cases" element={<CasesPage />} />
-                    <Route path="/cases/:id" element={<CasePage />} />
-                </Routes>
-            </Block>
-            <Block mt={150}>
-                <Divider />
-                <Footer />
-            </Block>
-        </FlexContainer>
+                    <Routes>
+                        <Route path="/" element={<MainPage />} />
+                        <Route path="/cases" element={<CasesPage />} />
+                        <Route path="/cases/:id" element={<CasePage />} />
+                    </Routes>
+                </Block>
+                <Block mt={150}>
+                    <Divider />
+                    <Footer />
+                </Block>
+            </FlexContainer>
+        </>
     );
 };
 

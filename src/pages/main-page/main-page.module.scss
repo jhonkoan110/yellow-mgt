@@ -1,0 +1,12 @@
+.root {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    right: 0;
+    opacity: 0.5;
+    height: 100%; // z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    background: url('../../images/background.jpg') no-repeat;
+}

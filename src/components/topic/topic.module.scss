@@ -5,7 +5,12 @@
 
     .divider {
         position: relative;
-        width: 100vw;
+        min-width: $app-width;
+
+        .anchor {
+            position: absolute;
+            top: -50px;
+        }
 
         .container {
             .title {
@@ -19,11 +24,8 @@
                 width: fit-content;
                 text-transform: uppercase;
                 white-space: nowrap;
+                overflow-wrap: normal;
             }
         }
     }
-
-    // .rightDivider {
-    //     flex: 1;
-    // }
 }

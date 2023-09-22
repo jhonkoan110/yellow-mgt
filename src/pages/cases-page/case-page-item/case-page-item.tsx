@@ -6,15 +6,16 @@ import { ArrowIcon } from 'components/icons/arrow-icon';
 
 import styles from './case-page-item.module.scss';
 import { IconButton } from 'components/icon-button';
+import { NavLink } from 'react-router-dom';
 
 interface Props {
-    id: number;
+    id: number | string;
     companyName: string;
     title: string;
     description: string;
 }
 
-export const CasePageItem = ({ companyName, title, description }: Props) => {
+export const CasePageItem = ({ id, companyName, title, description }: Props) => {
     return (
         <Block className={styles.root}>
             <h3 className={styles.heading}>{companyName}.</h3>
@@ -24,9 +25,11 @@ export const CasePageItem = ({ companyName, title, description }: Props) => {
             </Block>
             <Block mt={64}>
                 <FlexContainer justifyContent="flex-end">
-                    <IconButton>
-                        <ArrowIcon />
-                    </IconButton>
+                    <NavLink to={`/cases/${id}`}>
+                        <IconButton>
+                            <ArrowIcon />
+                        </IconButton>
+                    </NavLink>
                 </FlexContainer>
             </Block>
         </Block>
