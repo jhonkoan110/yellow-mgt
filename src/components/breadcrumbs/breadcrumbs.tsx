@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import cn from 'classnames';
 
 import { NavLink } from 'react-router-dom';
@@ -15,12 +15,12 @@ export const Breadcrumbs = () => {
         <div className={styles.root}>
             <NavLink to="/">MAIN PAGE </NavLink>
             {crumbs.map((crumb, index) => (
-                <>
+                <Fragment key={crumb}>
                     <span className={cn({ [styles.active]: index === crumbs.length - 1 })}>/</span>
                     <NavLink to={`/${crumb}`} className={cn({ [styles.active]: index === crumbs.length - 1 })}>
                         {crumb}
                     </NavLink>
-                </>
+                </Fragment>
             ))}
         </div>
     );

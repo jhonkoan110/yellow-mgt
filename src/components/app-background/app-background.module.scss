@@ -1,0 +1,12 @@
+.root {
+    position: fixed;
+    top: 0;
+    background-image: url('../../images/background.jpg');
+    background-repeat: repeat-y;
+    background-size: cover;
+    z-index: -1;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    filter: blur(40px);
+}

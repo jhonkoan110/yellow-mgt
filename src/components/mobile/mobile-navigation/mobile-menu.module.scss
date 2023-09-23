@@ -1,0 +1,39 @@
+@import 'styles/variables.scss';
+
+.root {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $app-background;
+    z-index: 1;
+    height: 100dvh;
+
+    .container {
+        height: 100%;
+
+        .header {
+            padding: 47px 16px 52px;
+        }
+
+        .navList {
+            .listItem {
+                &:first-of-type {
+                    border-top: 1px solid $black;
+                }
+
+                padding: 20px 16px;
+                border-bottom: 1px solid $black;
+
+                a {
+                    color: $black;
+                }
+            }
+        }
+
+        .mailContainer {
+            padding: 0 16px;
+        }
+    }
+}

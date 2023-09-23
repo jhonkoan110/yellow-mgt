@@ -17,3 +17,11 @@
         }
     }
 }
+
+@media screen and (max-width: $app-mobile-width) {
+    .headerInner {
+        gap: auto;
+        justify-content: space-between;
+        // padding: 0 16px;
+    }
+}

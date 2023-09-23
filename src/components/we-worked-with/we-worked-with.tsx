@@ -12,12 +12,14 @@ import nintendo from '../../images/nintendo.png';
 import styles from './we-worked-with.module.scss';
 import { Block } from 'components/block';
 import { MatchGroup } from 'components/icons/companies/match-group';
-import { Nintendo } from 'components/icons/companies/nintendo';
+import { useMobileContext } from 'contexts/mobile-context';
 
 export const WeWorkedWith = () => {
+    const isMobile = useMobileContext();
+
     return (
-        <Container className={styles.root} mt={50}>
-            <FlexContainer justifyContent="space-between" alignItems="center">
+        <Container className={styles.root} mt={isMobile ? 40 : 50}>
+            <FlexContainer justifyContent="space-between" alignItems="center" wrap="wrap">
                 <img src={igg} alt="i-got-games-logo" className={styles.image} />
                 <Block className={styles.image}>
                     <img src={nintendo} alt="i-got-games-logo" className={styles.image} />
@@ -30,7 +32,7 @@ export const WeWorkedWith = () => {
                 </Block>
             </FlexContainer>
             <Block mt={20}>
-                <FlexContainer justifyContent="space-between" alignItems="center">
+                <FlexContainer justifyContent="space-between" alignItems="center" wrap="wrap">
                     <Block className={styles.image}>
                         <img src={oasisGames} alt="i-got-games-logo" className={styles.image} />
                     </Block>

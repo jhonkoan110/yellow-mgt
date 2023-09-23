@@ -1,0 +1,23 @@
+@import 'styles/variables.scss';
+
+.root {
+    margin-top: 80px;
+    position: relative;
+
+    .anchor {
+        position: absolute;
+        top: -50px;
+    }
+
+    .title {
+        font-family: $barracuda;
+        line-height: normal;
+        width: fit-content;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow-wrap: normal;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+    }
+}

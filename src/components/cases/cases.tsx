@@ -12,22 +12,19 @@ import { NavLink } from 'react-router-dom';
 import { MAIN_DATA } from 'constants/main-data';
 import { Companies } from 'types/company';
 import { ALL_CASES } from 'constants/companies';
+import { useMobileContext } from 'contexts/mobile-context';
+
+const [first, second, third] = ALL_CASES!;
 
 export const Cases = () => {
-    const [first, second, third] = ALL_CASES!;
+    const isMobile = useMobileContext();
 
     return (
-        <Block mt={50} className={styles.root}>
-            {/* {Object.keys(MAIN_DATA).map((company) =>
-                MAIN_DATA[company as Companies]?.map((c) =>
-                    c.cases.map((caseItem) => <CaseItem key={caseItem.title} addition={c.addition} {...caseItem} />),
-                ),
-            )} */}
-
+        <Block mt={isMobile ? 40 : 50} className={styles.root}>
             {[first, second, third].map((caseItem) => (
                 <CaseItem key={caseItem.link} {...caseItem} />
             ))}
-            <Container mt={30}>
+            <Container mt={isMobile ? 40 : 30}>
                 <FlexContainer alignItems="center" justifyContent="center">
                     <NavLink to="/cases">
                         <Button className={styles.seeCasesBtn}>SEE ALL CASES</Button>

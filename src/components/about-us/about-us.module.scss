@@ -1,6 +1,25 @@
+@import 'styles/variables.scss';
+
 .root {
-    .text {
-        line-height: 24px;
-        width: 510px;
+    .flexContainer {
+        gap: 150px;
+
+        .text {
+            line-height: 24px;
+            width: 510px;
+        }
+    }
+}
+
+@media screen and (max-width: $app-mobile-width) {
+    .root {
+        .flexContainer {
+            flex-direction: column;
+            gap: 40px;
+
+            .text {
+                width: 358px;
+            }
+        }
     }
 }

@@ -28,6 +28,8 @@
         }
 
         .toggleButton {
+            display: block;
+            margin-left: auto;
             padding: 0;
             border: none;
             height: fit-content;
@@ -47,16 +49,57 @@
     height: 410px;
 }
 
+.none {
+    display: none !important;
+}
+
 @keyframes fade-in {
     from {
         height: 0;
         opacity: 0;
-        // width: 0;
     }
 
     to {
-        // width: 620px;
         opacity: 1;
         height: 350px;
+    }
+}
+
+@media screen and (max-width: $app-mobile-width) {
+    .root {
+        .container {
+            .flexContainer {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                .image {
+                    width: 358px;
+                    height: 202px;
+                    animation: fade-in-mobile 0.2s linear;
+                }
+
+                .additionContainer {
+                    width: 358px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .expanded {
+        height: 336px;
+    }
+}
+
+@keyframes fade-in-mobile {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        height: 202px;
     }
 }

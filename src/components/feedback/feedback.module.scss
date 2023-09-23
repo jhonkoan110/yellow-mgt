@@ -15,3 +15,12 @@
         line-height: 20px;
     }
 }
+
+@media screen and (max-width: $app-mobile-width) {
+    .root {
+        .title {
+            text-align: center;
+            font-size: 36px;
+        }
+    }
+}

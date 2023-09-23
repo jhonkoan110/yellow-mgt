@@ -5,11 +5,15 @@ import { Container } from 'components/container';
 import { StrategyBlock } from './strategy-block';
 
 import styles from './about-us.module.scss';
+import { useMobileContext } from 'contexts/mobile-context';
+import { MobileStrategyBlock } from 'components/mobile/mobile-strategy-block/mobile-strategy-block';
 
 export const AboutUs = () => {
+    const isMobile = useMobileContext();
+
     return (
-        <Container mt={50} className={styles.root}>
-            <FlexContainer gap={150}>
+        <Container mt={isMobile ? 40 : 50} className={styles.root}>
+            <FlexContainer className={styles.flexContainer}>
                 <div className={styles.text}>
                     <p>We are a communication agency specializing in influencer marketing, digital and event.</p>
                     <br />
@@ -22,7 +26,7 @@ export const AboutUs = () => {
                         technologies to provide our clients with the most innovative and impactful campaigns possible.
                     </p>
                 </div>
-                <StrategyBlock />
+                {isMobile ? <MobileStrategyBlock /> : <StrategyBlock />}
             </FlexContainer>
         </Container>
     );

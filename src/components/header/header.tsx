@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-
 import { Container } from 'components/container';
 import { Logo } from 'components/logo';
 import { getHashAnchor } from 'utils/get-hash-anchor';
 import { Anchors } from 'constants/anchors';
+import { useMobileContext } from 'contexts/mobile-context';
 
 import styles from './header.module.scss';
-import { useWindowDimensions } from 'hooks/use-window-dimensions';
+import { useBoolean } from 'hooks/use-boolean';
+import { IconButton } from 'components/icon-button';
+import { BurgerIcon } from 'components/icons/burger-icon';
+import { MobileMenu } from 'components/mobile/mobile-navigation';
+import { MobileLogo } from 'components/mobile/mobile-logo';
 
 export const Header = () => {
-    const { width } = useWindowDimensions();
+    const isMobile = useMobileContext();
+
+    const { value: isMobileMenuOpen, setTrue: handleOpenMobileMenu, setFalse: handleCloseMobileMenu } = useBoolean();
 
     return (
         <header className={styles.root}>
@@ -20,11 +27,11 @@ export const Header = () => {
                     <ul className={styles.headerInner}>
                         <li>
                             <NavLink to="/" className={styles.link}>
-                                <Logo />
+                                {isMobile ? <MobileLogo /> : <Logo />}
                             </NavLink>
                         </li>
 
-                        {width > 390 && (
+                        {!isMobile && (
                             <>
                                 <li>
                                     <HashLink to={getHashAnchor(Anchors.AboutUs)} className={styles.link} smooth>
@@ -43,6 +50,12 @@ export const Header = () => {
                                 </li>
                             </>
                         )}
+                        {isMobile && (
+                            <IconButton onClick={handleOpenMobileMenu}>
+                                <BurgerIcon />
+                            </IconButton>
+                        )}
+                        {isMobileMenuOpen && isMobile && <MobileMenu onClose={handleCloseMobileMenu} />}
                     </ul>
                 </nav>
             </Container>

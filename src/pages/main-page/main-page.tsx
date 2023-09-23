@@ -9,11 +9,15 @@ import { WeWorkedWith } from 'components/we-worked-with';
 import { Feedback } from 'components/feedback';
 import { Anchors } from 'constants/anchors';
 import { Outlet } from 'react-router-dom';
+import { useMobileContext } from 'contexts/mobile-context';
+import { MobileMainInfo } from 'components/mobile/mobile-main-info/mobile-main-info';
 
 export const MainPage = () => {
+    const isMobile = useMobileContext();
+
     return (
         <>
-            <MainInfo />
+            {isMobile ? <MobileMainInfo /> : <MainInfo />}
 
             <Topic title="about us" name={Anchors.AboutUs} />
             <AboutUs />
