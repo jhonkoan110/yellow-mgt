@@ -1,17 +1,31 @@
 @import 'styles/variables.scss';
 
 .root {
+    position: relative;
     padding: 30px;
-    border: 1px solid black;
+    box-shadow: 1px 1px 0 0 black, inset 1px 1px 0 0 black;
     height: 150px;
     width: calc($app-width / 3);
     height: 240px;
+    color: $black;
 
     .heading {
         font-size: 20px;
         font-family: $barracuda;
         line-height: 26px;
+        font-weight: 400;
         text-transform: uppercase;
+    }
+
+    .topHeading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .number {
+            font-family: $barracuda;
+            font-size: 24px;
+        }
     }
 
     .description {

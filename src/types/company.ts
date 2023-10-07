@@ -5,7 +5,7 @@ export enum Companies {
     Masomo = 'masomo',
     Nutaku = 'nutaku',
     OasisGames = 'oasis games',
-    WildLife = 'wild life',
+    WildLife = 'wildlife studios',
     TencentGames = 'tencent games',
 }
 

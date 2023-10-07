@@ -7,6 +7,8 @@ import styles from './footer.module.scss';
 import { HashLink } from 'react-router-hash-link';
 import { getHashAnchor } from 'utils/get-hash-anchor';
 import { Anchors } from 'constants/anchors';
+import { NavLink } from 'react-router-dom';
+import { scrollToTop } from 'utils/scroll-to-top';
 
 export const Footer = () => {
     return (
@@ -14,7 +16,9 @@ export const Footer = () => {
             <div className={styles.navs}>
                 <HashLink to={getHashAnchor(Anchors.AboutUs)}>about us</HashLink>
                 <HashLink to={getHashAnchor(Anchors.OurServices)}>our services</HashLink>
-                <HashLink to={getHashAnchor(Anchors.Cases)}>cases</HashLink>
+                <NavLink to="/cases" onClick={scrollToTop}>
+                    cases
+                </NavLink>
             </div>
             <div>
                 <HashLink to={getHashAnchor(Anchors.Logo)}>

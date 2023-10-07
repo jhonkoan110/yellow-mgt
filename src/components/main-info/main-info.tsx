@@ -11,6 +11,8 @@ import { ArrowIcon } from 'components/icons/arrow-icon';
 import { HashLink } from 'react-router-hash-link';
 
 import styles from './main-info.module.scss';
+import { NavLink } from 'react-router-dom';
+import { scrollToTop } from 'utils/scroll-to-top';
 
 export const MainInfo = () => {
     return (
@@ -32,13 +34,13 @@ export const MainInfo = () => {
                             you become a leader in your industry and reach more of your target audience. We guarantee
                             results and an individual approach to each client.
                         </p>
-                        <HashLink to="/#cases">
+                        <NavLink onClick={scrollToTop} to="/cases">
                             <Button className={styles.casesButton}>
                                 <FlexContainer justifyContent="space-between">
                                     CASES <ArrowIcon />
                                 </FlexContainer>
                             </Button>
-                        </HashLink>
+                        </NavLink>
                     </FlexContainer>
                 </FlexContainer>
             </FlexContainer>

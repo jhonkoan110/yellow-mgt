@@ -1,9 +1,13 @@
 import React from 'react';
 
-import { Block } from 'components/block';
+import { copyMail } from './mail.utils';
 
 import styles from './mail.module.scss';
 
 export const Mail = () => {
-    return <Block className={styles.root}>nikita@yellowmgt.com</Block>;
+    return (
+        <div className={styles.root} onClick={copyMail} title="Copy to clipboard">
+            nikita@yellowmgt.com
+        </div>
+    );
 };

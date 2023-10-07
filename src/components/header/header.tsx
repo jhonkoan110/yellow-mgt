@@ -7,13 +7,13 @@ import { Logo } from 'components/logo';
 import { getHashAnchor } from 'utils/get-hash-anchor';
 import { Anchors } from 'constants/anchors';
 import { useMobileContext } from 'contexts/mobile-context';
-
-import styles from './header.module.scss';
 import { useBoolean } from 'hooks/use-boolean';
 import { IconButton } from 'components/icon-button';
 import { BurgerIcon } from 'components/icons/burger-icon';
 import { MobileMenu } from 'components/mobile/mobile-navigation';
 import { MobileLogo } from 'components/mobile/mobile-logo';
+
+import styles from './header.module.scss';
 
 export const Header = () => {
     const isMobile = useMobileContext();
@@ -44,9 +44,9 @@ export const Header = () => {
                                     </HashLink>
                                 </li>
                                 <li>
-                                    <HashLink to={getHashAnchor(Anchors.Cases)} className={styles.link}>
+                                    <NavLink to="/cases" className={styles.link}>
                                         cases
-                                    </HashLink>
+                                    </NavLink>
                                 </li>
                             </>
                         )}

@@ -31,7 +31,11 @@ export const CaseItem = ({ link, title, imageSrc, addition, caseLabel }: Props) 
                 <Block mt={30} mb={30}>
                     <FlexContainer justifyContent="space-between">
                         <FlexContainer className={styles.flexContainer}>
-                            {isOpen && <Block className={styles.image} />}
+                            {isOpen && (
+                                <Block className={styles.image}>
+                                    <img src={imageSrc} style={{ height: '100%', width: '100%', display: 'block' }} />
+                                </Block>
+                            )}
                             {!isOpen ? (
                                 <Block className={styles.title}>{caseLabel}</Block>
                             ) : (

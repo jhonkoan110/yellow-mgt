@@ -31,9 +31,9 @@ export const App = () => {
                         <a id={Anchors.Logo} />
                         <FlexContainer className={styles.root} flexDirection="column" justifyContent="space-between">
                             <Block>
-                                <Divider />
+                                <Divider height={1} />
                                 <Header />
-                                <Divider />
+                                <Divider height={1} />
 
                                 <Routes>
                                     <Route path="/" element={<MainPage />} />
@@ -42,7 +42,7 @@ export const App = () => {
                                 </Routes>
                             </Block>
                             <Block mt={isMobile ? 114 : 150}>
-                                <Divider />
+                                <Divider height={1} />
                                 <Footer />
                             </Block>
                         </FlexContainer>

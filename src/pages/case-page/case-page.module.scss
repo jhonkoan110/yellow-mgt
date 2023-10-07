@@ -22,6 +22,9 @@
 
     .image {
         background-color: $grey2;
+        display: block;
+        height: 100%;
+        width: 100%;
     }
 
     .title {
@@ -34,5 +37,13 @@
     .description {
         margin-top: 20px;
         line-height: 24px;
+    }
+}
+
+@media screen and (max-width: $app-mobile-width) {
+    .root {
+        .header {
+            font-size: 40px;
+        }
     }
 }

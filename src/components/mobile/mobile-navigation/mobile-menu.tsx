@@ -12,6 +12,7 @@ import { getHashAnchor } from 'utils/get-hash-anchor';
 import { NavLink } from 'react-router-dom';
 
 import styles from './mobile-menu.module.scss';
+import { scrollToTop } from 'utils/scroll-to-top';
 
 interface MobileMenuProps {
     onClose: VoidFunction;
@@ -31,6 +32,11 @@ export const MobileMenu = ({ onClose }: MobileMenuProps) => {
             }
         };
     }, []);
+
+    const handleCasesClick = () => {
+        onClose();
+        scrollToTop();
+    };
 
     return (
         <Block className={styles.root}>
@@ -59,9 +65,9 @@ export const MobileMenu = ({ onClose }: MobileMenuProps) => {
                                 </HashLink>
                             </li>
                             <li className={styles.listItem}>
-                                <HashLink to={getHashAnchor(Anchors.Cases)} onClick={onClose}>
+                                <NavLink to="/cases" onClick={handleCasesClick}>
                                     cases
-                                </HashLink>
+                                </NavLink>
                             </li>
                         </ul>
                     </nav>
