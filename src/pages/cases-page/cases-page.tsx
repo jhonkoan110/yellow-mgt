@@ -3,12 +3,11 @@ import React from 'react';
 import { Container } from 'components/container';
 import { FlexContainer } from 'components/flex-container';
 import { CasePageItem } from './case-page-item';
-import { ALL_CASES } from 'constants/companies';
 import { Breadcrumbs } from 'components/breadcrumbs/breadcrumbs';
 import { Outlet } from 'react-router-dom';
+import { ALL_CASES_2 } from 'constants/main-data';
 
 import styles from './cases-page.module.scss';
-import { ALL_CASES_2 } from 'constants/main-data';
 
 export const CasesPage = () => {
     return (
@@ -19,10 +18,10 @@ export const CasesPage = () => {
                     <CasePageItem
                         key={caseItem.id}
                         id={caseItem.id}
-                        // id={caseItem.title}
                         companyName={caseItem.companyName}
                         title={caseItem.title}
                         description={caseItem.addition}
+                        productLogo={caseItem.productLogo}
                     />
                 ))}
                 {/* {ALL_CASES?.map((caseItem) => (

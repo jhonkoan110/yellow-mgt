@@ -16,7 +16,6 @@ const { 1: case1, 10: case10, 7: case7 } = jData;
 
 const cases = [case1, case10, case7];
 
-
 export const Cases = () => {
     const isMobile = useMobileContext();
 
@@ -25,25 +24,15 @@ export const Cases = () => {
             {cases.map((caseItem) => (
                 <CaseItem
                     key={caseItem.id}
-                    title={`${caseItem.companyName}. ${caseItem.title}`}
+                    title={`${caseItem.title}`}
                     addition={caseItem.addition}
                     id={caseItem.id}
                     imageSrc={caseItem.cases[0].imageSrc}
                     caseLabel={caseItem.cases[0].link}
-                    // link=''
+                    productLogo={caseItem.productLogo}
+                    link={caseItem.cases[0].link}
                 />
             ))}
-            {/* {[first, second, third].map((caseItem) => (
-                <CaseItem
-                    key={caseItem.id}
-                    title={caseItem.link}
-                    id={caseItem.id}
-                    addition={caseItem.link}
-                    caseLabel=""
-                    imageSrc={caseItem.imageSrc}
-                    link=""
-                />
-            ))} */}
             <Container mt={isMobile ? 40 : 30}>
                 <FlexContainer alignItems="center" justifyContent="center">
                     <NavLink to="/cases" onClick={scrollToTop}>

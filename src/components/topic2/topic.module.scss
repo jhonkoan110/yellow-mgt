@@ -1,0 +1,33 @@
+@import 'styles/variables.scss';
+
+.root {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1280px 1fr;
+    align-items: center;
+    margin-top: 150px;
+
+    .anchor {
+        position: absolute;
+        top: -50px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 70px auto 1fr;
+
+        align-items: center;
+
+        .title {
+            margin-left: 40px;
+            margin-right: 40px;
+            font-family: $barracuda;
+            font-size: 54px;
+            line-height: normal;
+            width: fit-content;
+            text-transform: uppercase;
+            white-space: nowrap;
+            overflow-wrap: normal;
+        }
+    }
+}

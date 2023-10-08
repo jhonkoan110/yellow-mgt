@@ -38,6 +38,13 @@ import tencentPubgProLeague3 from '../images/cases/tencent-pubg-pro-league-3.jpg
 
 import tencentMobileLeagueOfLegends1 from '../images/cases/tencent-mobile-league-of-legends-1.jpg';
 
+import lordsMobileLogo from '../images/lords-mobile-logo.png';
+import pubgMobileLogo from '../images/pubg-mobile-logo.png';
+import basketballArenaLogo from '../images/basketball-arena-logo.png';
+import abloLogo from '../images/ablo-logo.png';
+import tennisClashLogo from '../images/tennis-clash-logo.png';
+import timePrincessLogo from '../images/time-princess-logo.png';
+
 export const MAIN_DATA: {
     [key in Companies]?: CompanyData[];
 } = {
@@ -49,6 +56,7 @@ interface Tmp {
     companyName: Companies;
     title: string;
     addition: string;
+    productLogo?: string;
     cases: {
         id: number;
         link: string;
@@ -65,6 +73,7 @@ export const jData: Record<string, Tmp> = {
         companyName: Companies.IGG,
         title: 'lords mobile',
         addition: '360° Campaign Development',
+        productLogo: lordsMobileLogo,
         cases: [
             {
                 id: 1,
@@ -84,6 +93,7 @@ export const jData: Record<string, Tmp> = {
         id: 2,
         companyName: Companies.IGG,
         title: 'time princess',
+        productLogo: timePrincessLogo,
         addition: '360° Campaign Development',
         cases: [
             {
@@ -135,6 +145,7 @@ export const jData: Record<string, Tmp> = {
         companyName: Companies.IGG,
         title: 'Time Princess. Cosplay. Instagram',
         addition: '360° Campaign Development',
+        productLogo: timePrincessLogo,
         cases: [
             {
                 id: 1,
@@ -157,6 +168,7 @@ export const jData: Record<string, Tmp> = {
         companyName: Companies.WildLife,
         addition: '360° Campaign Development',
         title: 'Zooba & Tennis Clash',
+        productLogo: tennisClashLogo,
         cases: [
             {
                 id: 1,
@@ -183,73 +195,74 @@ export const jData: Record<string, Tmp> = {
         companyName: Companies.MatchGroup,
         title: 'Ablo',
         addition: '360° Campaign Development',
+        productLogo: abloLogo,
         cases: [
             {
                 id: 1,
-                link: 'aveme lissa / ig story',
+                link: '',
                 imageSrc: matchGroupAblo1,
                 isShortView: true,
                 description: 'aveme lissa / ig story',
             },
             {
                 id: 2,
-                link: 'aveme lissa / ig story',
+                link: '',
                 imageSrc: matchGroupAblo2,
                 isShortView: true,
                 description: 'aveme lissa / ig story',
             },
             {
                 id: 3,
-                link: 'Dima Ermuzevich / ig story',
+                link: '',
                 imageSrc: matchGroupAblo3,
                 isShortView: true,
                 description: 'Dima Ermuzevich / ig story',
             },
             {
                 id: 4,
-                link: 'glossmix / IG story',
+                link: '',
                 imageSrc: matchGroupAblo4,
                 isShortView: true,
                 description: 'glossmix / IG story',
             },
             {
                 id: 5,
-                link: 'Kostiakina Yelyzaveta / IG story',
+                link: '',
                 imageSrc: matchGroupAblo5,
                 isShortView: true,
                 description: 'Kostiakina Yelyzaveta / IG story',
             },
             {
                 id: 6,
-                link: 'Maniloun / ig story',
+                link: '',
                 imageSrc: matchGroupAblo6,
                 isShortView: true,
                 description: 'Maniloun / ig story',
             },
             {
                 id: 7,
-                link: 'Nastya Molkova / IG story',
+                link: '',
                 imageSrc: matchGroupAblo7,
                 isShortView: true,
                 description: 'Nastya Molkova / IG story',
             },
             {
                 id: 8,
-                link: 'mar.maries / IG story',
+                link: '',
                 imageSrc: matchGroupAblo8,
                 isShortView: true,
                 description: 'mar.maries / IG story',
             },
             {
                 id: 9,
-                link: 'dgraph / ig story',
+                link: '',
                 imageSrc: matchGroupAblo9,
                 isShortView: true,
                 description: 'dgraph / ig story',
             },
             {
                 id: 10,
-                link: 'Evelinushka / ig story',
+                link: '',
                 imageSrc: matchGroupAblo10,
                 isShortView: true,
                 description: 'Evelinushka / ig story',
@@ -267,6 +280,7 @@ export const jData: Record<string, Tmp> = {
         companyName: Companies.Masomo,
         title: 'basketball arena',
         addition: '360° Campaign Development',
+        productLogo: basketballArenaLogo,
         cases: [
             {
                 id: 1,
@@ -281,6 +295,7 @@ export const jData: Record<string, Tmp> = {
         companyName: Companies.TencentGames,
         title: 'pubg mobile (song)',
         addition: '360° Campaign Development',
+        productLogo: pubgMobileLogo,
         cases: [
             {
                 id: 1,
@@ -294,6 +309,7 @@ export const jData: Record<string, Tmp> = {
         id: 9,
         companyName: Companies.TencentGames,
         addition: '360° Campaign Development',
+        productLogo: pubgMobileLogo,
         title: 'pubg mobile. pro league europe championship season 1',
         cases: [
             {
@@ -324,6 +340,7 @@ export const jData: Record<string, Tmp> = {
         companyName: Companies.TencentGames,
         addition: '360° Campaign Development',
         title: 'pubg mobile x League of Legends',
+        productLogo: pubgMobileLogo,
         cases: [
             {
                 id: 1,

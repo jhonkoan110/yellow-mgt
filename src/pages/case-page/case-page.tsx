@@ -43,6 +43,16 @@ const getImageHeight = ({
     return caseHeight ?? 350;
 };
 
+export const ConditionalLink = ({ link, children }: { link?: string; children: React.ReactNode }) => {
+    return link ? (
+        <Link to={link} target="_blank">
+            {children}{' '}
+        </Link>
+    ) : (
+        <>{children}</>
+    );
+};
+
 export const CasePage = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
@@ -70,7 +80,7 @@ export const CasePage = () => {
             <Block mt={isMobile ? 40 : 50}>
                 <FlexContainer gap={40} wrap="wrap" justifyContent={isMobile ? 'center' : 'flex-start'}>
                     {data.cases?.map((caseItem) => (
-                        <Link to={caseItem.link} target="_blank" key={caseItem.id}>
+                        <ConditionalLink link={caseItem.link} key={caseItem.id}>
                             <Block width={getImageWidth(isMobile, caseItem.isShortView)}>
                                 <img
                                     src={caseItem.imageSrc}
@@ -86,7 +96,7 @@ export const CasePage = () => {
                                 />
                                 <h3 className={styles.title}>{caseItem.description}</h3>
                             </Block>
-                        </Link>
+                        </ConditionalLink>
                     ))}
                 </FlexContainer>
             </Block>

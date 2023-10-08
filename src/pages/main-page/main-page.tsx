@@ -11,6 +11,7 @@ import { Anchors } from 'constants/anchors';
 import { Outlet } from 'react-router-dom';
 import { useMobileContext } from 'contexts/mobile-context';
 import { MobileMainInfo } from 'components/mobile/mobile-main-info/mobile-main-info';
+import { Topic2 } from 'components/topic2/topic';
 
 export const MainPage = () => {
     const isMobile = useMobileContext();
@@ -19,16 +20,16 @@ export const MainPage = () => {
         <>
             {isMobile ? <MobileMainInfo /> : <MainInfo />}
 
-            <Topic title="about us" name={Anchors.AboutUs} />
+            <Topic2 title="about us" name={Anchors.AboutUs} />
             <AboutUs />
 
-            <Topic title="our services" name={Anchors.OurServices} />
+            <Topic2 title="our services" name={Anchors.OurServices} />
             <OurServices />
 
-            <Topic title="cases" name={Anchors.Cases} />
+            <Topic2 title="cases" name={Anchors.Cases} />
             <Cases />
 
-            <Topic title="we worked with" />
+            <Topic2 title="we worked with" />
             <WeWorkedWith />
 
             <Feedback />

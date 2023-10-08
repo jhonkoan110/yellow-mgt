@@ -11,21 +11,22 @@
 
     .heading {
         font-size: 20px;
-        font-family: $barracuda;
         line-height: 26px;
         font-weight: 400;
         text-transform: uppercase;
+        justify-content: space-between;
+        display: flex;
+
+        span {
+            font-family: $barracuda;
+        }
     }
 
-    .topHeading {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .number {
-            font-family: $barracuda;
-            font-size: 24px;
-        }
+    .number {
+        font-family: $barracuda;
+        font-size: 24px;
+        margin-left: auto;
+        font-weight: 400;
     }
 
     .description {

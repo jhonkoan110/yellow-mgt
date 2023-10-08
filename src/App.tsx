@@ -27,7 +27,7 @@ export const App = () => {
             {useMemo(
                 () => (
                     <>
-                        {/* <AppBackground /> */}
+                        <AppBackground />
                         <a id={Anchors.Logo} />
                         <FlexContainer className={styles.root} flexDirection="column" justifyContent="space-between">
                             <Block>

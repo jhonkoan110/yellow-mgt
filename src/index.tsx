@@ -4,11 +4,12 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, RouterProvider } from 'react-router-dom';
+import { Container } from 'components/container';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/">
             <App />
         </BrowserRouter>
     </React.StrictMode>,

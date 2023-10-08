@@ -3,6 +3,7 @@
 .root {
     border-bottom: 1px solid $grey2;
     height: 86px;
+
     display: flex;
 
     transition: height 0.2s linear;
@@ -29,6 +30,9 @@
             font-size: 20px;
             line-height: 26px;
             text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .toggleButton {
@@ -73,6 +77,12 @@
     .root {
         .container {
             max-height: 378px;
+
+            .title {
+                // justify-content: flex-start !important;
+                align-items: auto !important;
+            }
+
             .flexContainer {
                 width: 100%;
                 flex-direction: column;
