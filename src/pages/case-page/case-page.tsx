@@ -68,7 +68,7 @@ export const CasePage = () => {
             </h1>
             {data.addition && <h2 className={styles.addition}>{data.addition}</h2>}
             <Block mt={isMobile ? 40 : 50}>
-                <FlexContainer gap={40} wrap="wrap">
+                <FlexContainer gap={40} wrap="wrap" justifyContent={isMobile ? 'center' : 'flex-start'}>
                     {data.cases?.map((caseItem) => (
                         <Block width={getImageWidth(isMobile, caseItem.isShortView)} key={caseItem.id}>
                             <img

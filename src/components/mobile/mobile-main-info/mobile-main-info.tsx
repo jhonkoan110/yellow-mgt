@@ -2,12 +2,11 @@ import React from 'react';
 
 import { Block } from 'components/block';
 import { Container } from 'components/container';
-import { HashLink } from 'react-router-hash-link';
-import { getHashAnchor } from 'utils/get-hash-anchor';
-import { Anchors } from 'constants/anchors';
 import { Button } from 'components/button';
 import { FlexContainer } from 'components/flex-container';
 import { ArrowIcon } from 'components/icons/arrow-icon';
+import { NavLink } from 'react-router-dom';
+import { scrollToTop } from 'utils/scroll-to-top';
 
 import styles from './mobile-main-info.module.scss';
 
@@ -121,13 +120,13 @@ export const MobileMainInfo = () => {
                 We assist clients in building and promoting their online presence through social media, blogs, and other
                 platforms. Our professional strategy helps establish industry leadership and reach target audiences.
             </Block>
-            <HashLink to={getHashAnchor(Anchors.Cases)}>
+            <NavLink to="/cases" onClick={scrollToTop}>
                 <Button className={styles.casesBtn}>
                     <FlexContainer justifyContent="space-between">
                         CASES <ArrowIcon />
                     </FlexContainer>
                 </Button>
-            </HashLink>
+            </NavLink>
         </Container>
     );
 };
