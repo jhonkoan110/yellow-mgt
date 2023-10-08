@@ -8,7 +8,6 @@ interface MobileContextProviderProps {
 }
 
 export const MobileContextProvider = React.memo(({ value, children }: MobileContextProviderProps) => {
-    console.log('render');
     return <MobileContext.Provider value={value}>{children}</MobileContext.Provider>;
 });
 

@@ -20,6 +20,12 @@
         text-transform: uppercase;
     }
 
+    .imageCongainer {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     .image {
         background-color: $grey2;
         display: block;
@@ -48,6 +54,7 @@
 
         .image {
             margin: 0 auto;
+            object-fit: cover;
         }
     }
 }

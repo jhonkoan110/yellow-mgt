@@ -8,5 +8,3 @@ export const ALL_CASES = Object.keys(MAIN_DATA).map((key) =>
         return [...acc, ...curr.cases.map((caseItem) => ({ ...caseItem, companyName: key, name: curr.name, addition: curr.addition }))];
     }, []),
 )[0];
-
-console.log(ALL_CASES);

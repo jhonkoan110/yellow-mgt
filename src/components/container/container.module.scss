@@ -5,7 +5,7 @@
     width: $app-width;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: $app-mobile-width) {
     .root {
         width: $app-mobile-width;
         padding: 0 18px;

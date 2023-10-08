@@ -32,232 +32,16 @@ import masomoBasketball1 from '../images/cases/masomo-basketball-1.jpg';
 
 import tencentPubgMobileSong1 from '../images/cases/tencent-pubg-mobile-song-1.jpg';
 
-import tencentPubgProLeague1 from '../images/cases/tencent-pubg-pro-league-1.jpg'
-import tencentPubgProLeague2 from '../images/cases/tencent-pubg-pro-league-2.jpg'
-import tencentPubgProLeague3 from '../images/cases/tencent-pubg-pro-league-3.jpg'
+import tencentPubgProLeague1 from '../images/cases/tencent-pubg-pro-league-1.jpg';
+import tencentPubgProLeague2 from '../images/cases/tencent-pubg-pro-league-2.jpg';
+import tencentPubgProLeague3 from '../images/cases/tencent-pubg-pro-league-3.jpg';
+
+import tencentMobileLeagueOfLegends1 from '../images/cases/tencent-mobile-league-of-legends-1.jpg';
 
 export const MAIN_DATA: {
     [key in Companies]?: CompanyData[];
 } = {
     [Companies.IGG]: IGG_DATA,
-};
-
-const obj = {
-    [Companies.IGG]: {
-        1: {
-            id: 1,
-            title: 'lords mobile',
-            addition: '360° Campaign Development',
-            cases: [
-                {
-                    id: 1,
-                    link: '/youtube',
-                    imageSrc: '',
-                },
-                {
-                    id: 2,
-                    link: '/youtube',
-                    imageSrc: '',
-                },
-            ],
-        },
-        2: {
-            id: 2,
-            title: 'time princess',
-            addition: '360° Campaign Development',
-            cases: [
-                {
-                    id: 1,
-                    link: '/youtube',
-                    imageSrc: '',
-                },
-                {
-                    id: 2,
-                    link: '/youtube',
-                    imageSrc: '',
-                },
-                {
-                    id: 3,
-                    link: '/youtube',
-                    imageSrc: '',
-                },
-                {
-                    id: 4,
-                    link: 'dgraph / youtube',
-                    imageSrc: '',
-                },
-            ],
-        },
-        3: {
-            id: 3,
-            title: 'Time Princess. Cosplay. Instagram',
-            addition: '360° Campaign Development',
-            cases: [
-                {
-                    id: 1,
-                    link: 'burning.princess / instagram',
-                    imageSrc: '',
-                },
-                {
-                    id: 2,
-                    link: '_raspytina_ / instagram',
-                    imageSrc: '',
-                },
-            ],
-        },
-    },
-    [Companies.WildLife]: {
-        1: {
-            id: 1,
-            title: 'Zooba & Tennis Clash',
-            addition: '360° Campaign Development',
-            cases: [
-                {
-                    id: 1,
-                    link: '/ youtube',
-                    imageSrc: '',
-                },
-                {
-                    id: 2,
-                    link: '/ youtube',
-                    imageSrc: '',
-                },
-                {
-                    id: 3,
-                    link: '/ youtube',
-                    imageSrc: '',
-                },
-            ],
-        },
-    },
-    [Companies.MatchGroup]: {
-        1: {
-            id: 1,
-            title: 'Ablo',
-            addition: '360° Campaign Development',
-            cases: [
-                {
-                    id: 1,
-                    link: 'aveme lissa / ig story',
-                    imageSrc: '',
-                },
-                {
-                    id: 2,
-                    link: 'aveme lissa / ig story',
-                    imageSrc: '',
-                },
-                {
-                    id: 3,
-                    link: 'Dima Ermuzevich / ig story',
-                    imageSrc: '',
-                },
-                {
-                    id: 4,
-                    link: 'glossmix / IG story',
-                    imageSrc: '',
-                },
-                {
-                    id: 5,
-                    link: 'Kostiakina Yelyzaveta / IG story',
-                    imageSrc: '',
-                },
-                {
-                    id: 6,
-                    link: 'Maniloun / ig story',
-                    imageSrc: '',
-                },
-                {
-                    id: 7,
-                    link: 'Nastya Molkova / IG story',
-                    imageSrc: '',
-                },
-                {
-                    id: 8,
-                    link: 'mar.maries / IG story',
-                    imageSrc: '',
-                },
-                {
-                    id: 9,
-                    link: 'dgraph / ig story',
-                    imageSrc: '',
-                },
-                {
-                    id: 10,
-                    link: 'Evelinushka / ig story',
-                    imageSrc: '',
-                },
-                {
-                    id: 11,
-                    link: 'mar.maries / youtube',
-                    imageSrc: '',
-                },
-            ],
-        },
-        2: {
-            id: 2,
-            title: 'pubg mobile. pro league europe championship season 1',
-            addition: '360° Campaign Development',
-            cases: [
-                {
-                    id: 1,
-                    link: 'Kika Kim / tiktok',
-                    imageSrc: '',
-                },
-                {
-                    id: 2,
-                    link: 'Dasha Dzhakeli / tiktok',
-                    imageSrc: '',
-                },
-                {
-                    id: 3,
-                    link: 'TIM / tiktok',
-                    imageSrc: '',
-                },
-            ],
-        },
-    },
-    [Companies.Masomo]: {
-        1: {
-            id: 1,
-            title: 'basketball arena.',
-            addition: '360° Campaign Development',
-            cases: [
-                {
-                    id: 1,
-                    link: 'Lesha Maisak / youtube',
-                    imageSrc: '',
-                },
-            ],
-        },
-    },
-    [Companies.TencentGames]: {
-        1: {
-            id: 1,
-            title: 'pubg mobile. (song)',
-            addition: '360° Campaign Development',
-            cases: [
-                {
-                    id: 1,
-                    link: 'PUBG MOBILE СНГ / youtube',
-                    imageSrc: '',
-                },
-            ],
-        },
-        2: {
-            id: 2,
-            title: 'pubg mobile x League of Legends',
-            addition: '360° Campaign Development',
-            cases: [
-                {
-                    id: 1,
-                    link: 'danya milokhin / youtube',
-                    imageSrc: '',
-                },
-            ],
-        },
-    },
-    [Companies.Nutaku]: {},
-    [Companies.OasisGames]: {},
 };
 
 interface Tmp {
@@ -268,6 +52,7 @@ interface Tmp {
     cases: {
         id: number;
         link: string;
+        description: string;
         imageSrc: string;
         height?: number;
         isShortView?: boolean;
@@ -283,13 +68,15 @@ export const jData: Record<string, Tmp> = {
         cases: [
             {
                 id: 1,
-                link: '/youtube',
+                link: 'https://www.youtube.com/watch?v=pK_UM3VHraM',
                 imageSrc: iggLordsMobile1,
+                description: 'BRIGMAN / youtube',
             },
             {
                 id: 2,
-                link: '/youtube',
+                link: 'https://www.youtube.com/watch?v=p_rI2lskBps&t=7s',
                 imageSrc: iggLordsMobile2,
+                description: 'ЛЁЛЯ ТАКСИ / youtube',
             },
         ],
     },
@@ -301,23 +88,27 @@ export const jData: Record<string, Tmp> = {
         cases: [
             {
                 id: 1,
-                link: '/youtube',
+                link: 'https://youtu.be/fluUtob2Vb4?si=pC7lvEnAxt9fY6eP',
                 imageSrc: iggTimePrincess1,
+                description: 'Tilka Play / youtube',
             },
             {
                 id: 2,
-                link: '/youtube',
+                link: 'https://youtu.be/DXcGCzN5Guo',
                 imageSrc: iggTimePrincess2,
+                description: 'Алиса Лисова / youtube',
             },
             {
                 id: 3,
-                link: '/youtube',
+                link: 'https://www.youtube.com/watch?v=I4dyku1bGmM',
                 imageSrc: iggTimePrincess3,
+                description: 'eto liana / youtube',
             },
             {
                 id: 4,
-                link: 'dgraph / youtube',
+                link: 'https://www.youtube.com/watch?v=Y91xUOw9N94',
                 imageSrc: iggTimePrincess4,
+                description: 'Daria Graph / youtube',
             },
         ],
     },
@@ -347,15 +138,17 @@ export const jData: Record<string, Tmp> = {
         cases: [
             {
                 id: 1,
-                link: 'burning.princess / instagram',
+                link: 'https://www.instagram.com/p/CNKjXKrMpui/?igshid=ssvgs12nsnhz',
                 imageSrc: iggCosplay1,
                 height: 417,
+                description: 'burning.princess / instagram',
             },
             {
                 id: 2,
-                link: '_raspytina_ / instagram',
+                link: 'https://www.instagram.com/p/CNKi9cmgKmZ/?img_index=1',
                 imageSrc: iggCosplay2,
                 height: 417,
+                description: '_raspytina_ / instagram',
             },
         ],
     },
@@ -367,18 +160,21 @@ export const jData: Record<string, Tmp> = {
         cases: [
             {
                 id: 1,
-                link: '/ youtube',
+                link: 'https://www.youtube.com/watch?v=0xj6QJFzi2g&t=94s',
                 imageSrc: wildlifeZooba1,
+                description: 'LINE / youtube',
             },
             {
                 id: 2,
-                link: '/ youtube',
+                link: 'https://www.youtube.com/watch?v=cNDxBWToyxQ',
                 imageSrc: wildlifeZooba2,
+                description: 'Fan PDA / youtube',
             },
             {
                 id: 3,
-                link: '/ youtube',
+                link: 'https://www.youtube.com/watch?v=lRMgKuV3MrE',
                 imageSrc: wildlifeZooba3,
+                description: 'КиноИндустрия / youtube',
             },
         ],
     },
@@ -393,65 +189,76 @@ export const jData: Record<string, Tmp> = {
                 link: 'aveme lissa / ig story',
                 imageSrc: matchGroupAblo1,
                 isShortView: true,
+                description: 'aveme lissa / ig story',
             },
             {
                 id: 2,
                 link: 'aveme lissa / ig story',
                 imageSrc: matchGroupAblo2,
                 isShortView: true,
+                description: 'aveme lissa / ig story',
             },
             {
                 id: 3,
                 link: 'Dima Ermuzevich / ig story',
                 imageSrc: matchGroupAblo3,
                 isShortView: true,
+                description: 'Dima Ermuzevich / ig story',
             },
             {
                 id: 4,
                 link: 'glossmix / IG story',
                 imageSrc: matchGroupAblo4,
                 isShortView: true,
+                description: 'glossmix / IG story',
             },
             {
                 id: 5,
                 link: 'Kostiakina Yelyzaveta / IG story',
                 imageSrc: matchGroupAblo5,
                 isShortView: true,
+                description: 'Kostiakina Yelyzaveta / IG story',
             },
             {
                 id: 6,
                 link: 'Maniloun / ig story',
                 imageSrc: matchGroupAblo6,
                 isShortView: true,
+                description: 'Maniloun / ig story',
             },
             {
                 id: 7,
                 link: 'Nastya Molkova / IG story',
                 imageSrc: matchGroupAblo7,
                 isShortView: true,
+                description: 'Nastya Molkova / IG story',
             },
             {
                 id: 8,
                 link: 'mar.maries / IG story',
                 imageSrc: matchGroupAblo8,
                 isShortView: true,
+                description: 'mar.maries / IG story',
             },
             {
                 id: 9,
                 link: 'dgraph / ig story',
                 imageSrc: matchGroupAblo9,
                 isShortView: true,
+                description: 'dgraph / ig story',
             },
             {
                 id: 10,
                 link: 'Evelinushka / ig story',
                 imageSrc: matchGroupAblo10,
                 isShortView: true,
+                description: 'Evelinushka / ig story',
             },
             {
                 id: 11,
-                link: 'mar.maries / youtube',
+                link: 'https://youtu.be/CiaE8kVSL_0?si=CJTy3mwPAYg2qbkj&t=229',
                 imageSrc: matchGroupAblo11,
+                description: 'mar.maries / youtube',
             },
         ],
     },
@@ -463,8 +270,9 @@ export const jData: Record<string, Tmp> = {
         cases: [
             {
                 id: 1,
-                link: 'Lesha Maisak / youtube',
+                link: 'https://youtu.be/lmcF7JS4_R4?si=ZN54TUWDt73bd8G1&t=200',
                 imageSrc: masomoBasketball1,
+                description: 'Lesha Maisak / youtube',
             },
         ],
     },
@@ -476,8 +284,9 @@ export const jData: Record<string, Tmp> = {
         cases: [
             {
                 id: 1,
-                link: 'PUBG MOBILE СНГ / youtube',
+                link: 'https://www.youtube.com/watch?v=mxyu5lIukyM',
                 imageSrc: tencentPubgMobileSong1,
+                description: 'PUBG MOBILE СНГ / youtube',
             },
         ],
     },
@@ -489,35 +298,41 @@ export const jData: Record<string, Tmp> = {
         cases: [
             {
                 id: 1,
-                link: 'Kika Kim / tiktok',
+                link: 'https://www.tiktok.com/@kikakiim/video/7030026999682927873',
                 imageSrc: tencentPubgProLeague1,
                 isShortView: true,
+                description: 'Kika Kim / tiktok',
             },
             {
                 id: 2,
-                link: 'Dasha Dzhakeli / tiktok',
+                link: 'https://vm.tiktok.com/ZGJnnQhKs/',
                 imageSrc: tencentPubgProLeague2,
-                isShortView: true
+                isShortView: true,
+                description: 'Dasha Dzhakeli / tiktok',
             },
             {
                 id: 3,
-                link: 'TIM / tiktok',
+                link: 'https://vm.tiktok.com/ZGJnn5Kr4/',
                 imageSrc: tencentPubgProLeague3,
-                isShortView: true
+                isShortView: true,
+                description: 'TIM / tiktok',
+            },
+        ],
+    },
+    10: {
+        id: 10,
+        companyName: Companies.TencentGames,
+        addition: '360° Campaign Development',
+        title: 'pubg mobile x League of Legends',
+        cases: [
+            {
+                id: 1,
+                imageSrc: tencentMobileLeagueOfLegends1,
+                link: 'https://www.youtube.com/watch?v=MXkjK856hKg',
+                description: 'danya milokhin / youtube',
             },
         ],
     },
 };
 
-interface FullCase {
-    id: number | string;
-    companyName: Companies;
-    title: string;
-    addition: string;
-    link: string;
-    imageSrc: string;
-}
-
 export const ALL_CASES_2 = Object.keys(jData).map((key) => jData[key]);
-
-// ALL_CASES[0].

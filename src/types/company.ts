@@ -13,7 +13,7 @@ export interface CompanyCase {
     id: number | string;
     imageSrc: string;
     title: string;
-    link: string;
+    link?: string;
     caseLabel: string;
 }
 

@@ -17,7 +17,7 @@ interface Props extends CompanyCase {
     addition: string;
 }
 
-export const CaseItem = ({ link, title, imageSrc, addition, caseLabel }: Props) => {
+export const CaseItem = ({ title, imageSrc, addition, caseLabel }: Props) => {
     const isMobile = useMobileContext();
     const [isOpen, setIsOpen] = useState(false);
 
@@ -32,16 +32,19 @@ export const CaseItem = ({ link, title, imageSrc, addition, caseLabel }: Props) 
                     <FlexContainer justifyContent="space-between">
                         <FlexContainer className={styles.flexContainer}>
                             {isOpen && (
-                                <Block className={styles.image}>
-                                    <img src={imageSrc} style={{ height: '100%', width: '100%', display: 'block' }} />
+                                <Block className={styles.imageContainer}>
+                                    <img
+                                        className={styles.image}
+                                        src={imageSrc}
+                                    />
                                 </Block>
                             )}
                             {!isOpen ? (
-                                <Block className={styles.title}>{caseLabel}</Block>
+                                <Block className={styles.title}>{title}</Block>
                             ) : (
                                 <FlexContainer flexDirection="column" justifyContent="space-between">
                                     <Block mt={isMobile ? 10 : 0} className={styles.title}>
-                                        {caseLabel}
+                                        {title}
                                     </Block>
                                     <FlexContainer justifyContent="space-between" className={styles.additionContainer}>
                                         <Block>{addition}</Block>

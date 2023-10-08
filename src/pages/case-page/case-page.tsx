@@ -4,12 +4,12 @@ import { Container } from 'components/container';
 import { FlexContainer } from 'components/flex-container';
 import { Block } from 'components/block';
 import { useNavigate, useParams } from 'react-router-dom';
-import { tmp } from 'constants/companies/igg';
-
-import styles from './case-page.module.scss';
 import { Breadcrumbs } from 'components/breadcrumbs';
 import { jData } from 'constants/main-data';
 import { useMobileContext } from 'contexts/mobile-context';
+
+import styles from './case-page.module.scss';
+import { Link } from 'react-router-dom';
 
 const getImageWidth = (isMobile: boolean, isShort?: boolean) => {
     if (isShort) {
@@ -70,22 +70,23 @@ export const CasePage = () => {
             <Block mt={isMobile ? 40 : 50}>
                 <FlexContainer gap={40} wrap="wrap" justifyContent={isMobile ? 'center' : 'flex-start'}>
                     {data.cases?.map((caseItem) => (
-                        <Block width={getImageWidth(isMobile, caseItem.isShortView)} key={caseItem.id}>
-                            <img
-                                src={caseItem.imageSrc}
-                                style={{
-                                    height: getImageHeight({
-                                        isMobile,
-                                        isShort: caseItem.isShortView,
-                                        caseHeight: caseItem.height,
-                                    }),
-                                }}
-                                className={styles.image}
-                                alt={caseItem.imageSrc}
-                            />
-                            <h3 className={styles.title}>{caseItem.link}</h3>
-                            <p className={styles.description}>{caseItem.link}</p>
-                        </Block>
+                        <Link to={caseItem.link} target="_blank" key={caseItem.id}>
+                            <Block width={getImageWidth(isMobile, caseItem.isShortView)}>
+                                <img
+                                    src={caseItem.imageSrc}
+                                    style={{
+                                        height: getImageHeight({
+                                            isMobile,
+                                            isShort: caseItem.isShortView,
+                                            caseHeight: caseItem.height,
+                                        }),
+                                    }}
+                                    className={styles.image}
+                                    alt={caseItem.imageSrc}
+                                />
+                                <h3 className={styles.title}>{caseItem.description}</h3>
+                            </Block>
+                        </Link>
                     ))}
                 </FlexContainer>
             </Block>
